@@ -1,0 +1,6 @@
+<form method="post">
+    {% csrf_token %}
+    {% load bfa %}
+    {% fingerprint_input %}
+    <button type="submit"> Request Anonymous Access </button>
+</form>

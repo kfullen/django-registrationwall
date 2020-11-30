@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from regwall.mixins import anonymous_login
 
 urlpatterns = [
+    url(r'^anonlogin', anonymous_login),
     url(r'^admin/', admin.site.urls),
     url(r'^articles/', include('articles.urls')),
     url(r'^accounts/', include('django.contrib.auth.urls')),

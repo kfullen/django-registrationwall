@@ -9,13 +9,19 @@ register = template.Library()
 @register.simple_tag(takes_context=True)
 def get_regwall_attempts(context):
     request = context['request']
-    return request.session['regwall']['attempts']
+    try:
+        return request.session['regwall']['attempts']
+    except KeyError:
+        return []
 
 
 @register.simple_tag(takes_context=True)
 def get_regwall_successes(context):
     request = context['request']
-    return request.session['regwall']['successes']
+    try:
+        return request.session['regwall']['successes']
+    except KeyError:
+        return []
 
 
 @register.simple_tag
