@@ -1,4 +1,4 @@
-Django Registration Wall
+PlexiWall
 ************************
 
 |PyPI version|_ |Build status|_
