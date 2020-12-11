@@ -24,16 +24,16 @@ Fake news articles credit goes to The Onion.
 
 USAGE
 =======
+.. code-block:: bash
 
-```
-$ mkvirtualenv -p python3 demo
-(demo)$ git clone [this_repo]
-(demo)$ cd plexiwall/demo/
-(demo)$ pip install -r requirements.txt
-(demo)$ cd demo/
-(demo)$ python manage.py migrate
-(demo)$ python manage.py loaddata articles_article.json
-(demo)$ python manage.py runserver
-```
+   $ pip install django-registrationwall
+   $ mkvirtualenv -p python3 demo
+   (demo)$ git clone [this_repo]
+   (demo)$ cd plexiwall/demo/
+   (demo)$ pip install -r requirements.txt
+   (demo)$ cd demo/
+   (demo)$ python manage.py migrate
+   (demo)$ python manage.py loaddata articles_article.json
+   (demo)$ python manage.py runserver
 
 Open http://127.0.0.1:8000/articles/.
